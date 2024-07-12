@@ -1,0 +1,29 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+
+
+file = pd.read_csv("/content/drive/MyDrive/Colab Notebooks/train.csv")
+
+
+def f1():
+        file.Survived.value_counts().plot(kind="bar")
+        plt.title("Titanic")
+        plt.xlabel(" Passengers")
+        plt.ylabel("Dead(0), alive (1)")
+        plt.show()
+        return f1
+
+def f2():
+        file.Gender.value_counts().plot(kind='pie')
+        plt.title("Gender")
+        plt.show()
+        return f2
+def f3():
+        file.Pclass.value_counts().plot(kind='density')
+        plt.title("Pclass")
+        plt.show()
+        return f3
+
+print(f1())
+print(f2())
+print(f3())
